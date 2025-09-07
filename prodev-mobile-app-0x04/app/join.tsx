@@ -28,27 +28,30 @@ export default function Index() {
 
         <View style={styles.formGroup}>
           <View>
-            <Text style={styles.placeholderText}>Username</Text>
-            <TextInput keyboardType="default" style={styles.inputField} />
+            <Text style={styles.formLabel}>Username</Text>
+            <TextInput keyboardType="default" style={styles.formControl} />
           </View>
           <View>
-            <Text style={styles.placeholderText}>Email</Text>
-            <TextInput keyboardType="email-address" style={styles.inputField} />
+            <Text style={styles.formLabel}>Email</Text>
+            <TextInput
+              keyboardType="email-address"
+              style={styles.formControl}
+            />
           </View>
           <View style={{ marginTop: 20 }}>
-            <Text style={styles.placeholderText}>Enter your Password</Text>
-            <View style={styles.passwordGroup}>
+            <Text style={styles.formLabel}>Enter your Password</Text>
+            <View style={styles.formPasswordControl}>
               <TextInput style={{ flex: 1 }} />
               <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
             </View>
-            <Text style={styles.placeholderText}>Confirm your Password</Text>
-            <View style={styles.passwordGroup}>
+            <Text style={styles.formLabel}>Confirm your Password</Text>
+            <View style={styles.formPasswordControl}>
               <TextInput style={{ flex: 1 }} />
               <FontAwesome name="eye-slash" size={24} color="#7E7B7B" />
             </View>
           </View>
         </View>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.primaryButton}>
           <Text style={styles.buttonText}>Sign up</Text>
         </TouchableOpacity>
 
@@ -58,8 +61,8 @@ export default function Index() {
           <View style={styles.divider}></View>
         </View>
 
-        <View style={styles.socialMediaButtonGroup}>
-          <TouchableOpacity style={styles.socialMediaButton}>
+        <View style={styles.secondaryButtonGroup}>
+          <TouchableOpacity style={styles.secondaryButton}>
             <View
               style={{
                 flexDirection: "row",
@@ -68,13 +71,13 @@ export default function Index() {
               }}
             >
               <Image source={require("@/assets/images/google.png")} />
-              <Text style={styles.socialMediaButtonText}>
+              <Text style={styles.secondaryButtonText}>
                 Continue with Google
               </Text>
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.socialMediaButton}>
+          <TouchableOpacity style={styles.secondaryButton}>
             <View
               style={{
                 flexDirection: "row",
@@ -83,16 +86,16 @@ export default function Index() {
               }}
             >
               <Image source={require("@/assets/images/facebook.png")} />
-              <Text style={styles.socialMediaButtonText}>
+              <Text style={styles.secondaryButtonText}>
                 Continue with Facebook
               </Text>
             </View>
           </TouchableOpacity>
         </View>
 
-        <View style={styles.subTextGroup}>
+        <View style={styles.signupgroup}>
           <Text style={styles.subText}>Already have an account?</Text>
-          <Text style={styles.subTextJoin}>Sign in</Text>
+          <Text style={styles.signupSubTitleText}>Sign in</Text>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
